@@ -10,8 +10,11 @@ public class Chat : ScriptableObject
         [TextArea(3, 10)]
         [Multiline]
         public string dialogueText;
+        public string speakerName;
         public GameObject leftCharacter;
-        public Character.Animations expression;
+        public Character.Animations leftExpression;
+        public GameObject rightCharacter;
+        public Character.Animations rightExpression;
     };
 
     public List<Command> chatCommands = new List<Command>();

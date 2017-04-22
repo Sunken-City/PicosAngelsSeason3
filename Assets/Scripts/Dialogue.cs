@@ -17,6 +17,7 @@ public class Dialogue : MonoBehaviour
     };
     public DialogueReferences dialogueBox;
     public GameObject leftCharacter;
+    public GameObject rightCharacter;
 
     void Awake()
     {
@@ -58,15 +59,31 @@ public class Dialogue : MonoBehaviour
         {
             SetText(cmd.dialogueText);
         }
-        if(cmd.leftCharacter)
+        if (cmd.leftCharacter)
         {
             if (leftCharacter)
             {
                 Destroy(leftCharacter);
             }
             leftCharacter = Instantiate(cmd.leftCharacter);
-            leftCharacter.GetComponent<SpriteRenderer>().sprite = leftCharacter.GetComponent<Character>().emotions[(int)cmd.expression];
+            leftCharacter.GetComponent<SpriteRenderer>().sprite = leftCharacter.GetComponent<Character>().emotions[(int)cmd.leftExpression];
             SetCharacterName(leftCharacter.GetComponent<Character>().name);
+        }
+        if (cmd.rightCharacter)
+        {
+            if (rightCharacter)
+            {
+                Destroy(rightCharacter);
+            }
+            Transform newTransform = transform;
+            newTransform.SetPositionAndRotation(new Vector2(2.0f, 0.0f), Quaternion.Euler(new Vector3(0.0f, 180.0f, 0.0f)));
+            rightCharacter = Instantiate(cmd.rightCharacter, newTransform);
+            rightCharacter.GetComponent<SpriteRenderer>().sprite = rightCharacter.GetComponent<Character>().emotions[(int)cmd.rightExpression];
+            SetCharacterName(rightCharacter.GetComponent<Character>().name);
+        }
+        if (!string.IsNullOrEmpty(cmd.speakerName))
+        {
+            SetCharacterName(cmd.dialogueText);
         }
     }
 }
