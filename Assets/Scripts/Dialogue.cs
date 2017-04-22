@@ -16,6 +16,7 @@ public class Dialogue : MonoBehaviour
         public Text nameText;
     };
     public DialogueReferences dialogueBox;
+    public GameObject leftCharacter;
 
     void Awake()
     {
@@ -48,7 +49,7 @@ public class Dialogue : MonoBehaviour
 
     public void SetCharacterName(string characterName)
     {
-        dialogueBox.dialogueText.name = characterName;
+        dialogueBox.nameText.text = characterName;
     }
 
     public void ApplyCommand(Chat.Command cmd)
@@ -57,9 +58,14 @@ public class Dialogue : MonoBehaviour
         {
             SetText(cmd.dialogueText);
         }
-        if (!string.IsNullOrEmpty(cmd.characterName))
+        if(cmd.leftCharacter)
         {
-            SetCharacterName(cmd.characterName);
+            if (leftCharacter)
+            {
+                Destroy(leftCharacter);
+            }
+            leftCharacter = Instantiate(cmd.leftCharacter);
+            SetCharacterName(leftCharacter.GetComponent<Character>().name);
         }
     }
 }
