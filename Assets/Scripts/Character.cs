@@ -30,7 +30,7 @@ public class Character : MonoBehaviour {
         Vector4 color = GetComponent<SpriteRenderer>().color;
         color.w = 0.0f;
         GetComponent<SpriteRenderer>().color = color;
-        voiceDisplacementVector = new Vector2(0.0f, 0.0f);
+        voiceDisplacementVector = new Vector2(0.0f, -3.0f);
         initialPosition = transform.localPosition;
     }
     

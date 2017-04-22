@@ -84,12 +84,20 @@ public class Dialogue : MonoBehaviour
         }
         if (cmd.leftCharacter)
         {
-            if (leftCharacter)
+            if (!leftCharacter)
             {
-                Destroy(leftCharacter);
+                leftCharacter = Instantiate(cmd.leftCharacter);
+                leftCharacter.transform.SetPositionAndRotation(new Vector3(-6.0f, -5.0f, 0.0f) + leftCharacter.transform.localPosition, Quaternion.Euler(leftCharacter.transform.rotation.eulerAngles));
             }
-            leftCharacter = Instantiate(cmd.leftCharacter);
-            leftCharacter.transform.SetPositionAndRotation(new Vector3(-6.0f, -5.0f, 0.0f) + leftCharacter.transform.localPosition, Quaternion.Euler(leftCharacter.transform.rotation.eulerAngles));
+            else
+            {
+                if (leftCharacter.GetComponent<Character>().name != cmd.leftCharacter.GetComponent<Character>().name)
+                {
+                    Destroy(leftCharacter);
+                    leftCharacter = Instantiate(cmd.leftCharacter);
+                    leftCharacter.transform.SetPositionAndRotation(new Vector3(-6.0f, -5.0f, 0.0f) + leftCharacter.transform.localPosition, Quaternion.Euler(leftCharacter.transform.rotation.eulerAngles));
+                }
+            }
             SetCharacterName(leftCharacter.GetComponent<Character>().name);
         }
         if(leftCharacter)
@@ -98,12 +106,21 @@ public class Dialogue : MonoBehaviour
         }
         if (cmd.rightCharacter)
         {
-            if (rightCharacter)
+            if (!rightCharacter)
             {
-                Destroy(rightCharacter);
+                rightCharacter = Instantiate(cmd.rightCharacter);
+                rightCharacter.transform.SetPositionAndRotation(new Vector3(6.0f, -5.0f, 0.0f) + rightCharacter.transform.localPosition, Quaternion.Euler(rightCharacter.transform.rotation.eulerAngles + new Vector3(0.0f, 180.0f, 0.0f)));
             }
-            rightCharacter = Instantiate(cmd.rightCharacter);
-            rightCharacter.transform.SetPositionAndRotation(new Vector3(6.0f, -5.0f, 0.0f) + rightCharacter.transform.localPosition, Quaternion.Euler(rightCharacter.transform.rotation.eulerAngles + new Vector3(0.0f, 180.0f, 0.0f)));
+            else
+            {
+                if (rightCharacter.GetComponent<Character>().name != cmd.rightCharacter.GetComponent<Character>().name)
+                {
+                    Destroy(rightCharacter);
+                    rightCharacter = Instantiate(cmd.rightCharacter);
+                    rightCharacter.transform.SetPositionAndRotation(new Vector3(6.0f, -5.0f, 0.0f) + rightCharacter.transform.localPosition, Quaternion.Euler(rightCharacter.transform.rotation.eulerAngles + new Vector3(0.0f, 180.0f, 0.0f)));
+                }
+            }
+            
             SetCharacterName(rightCharacter.GetComponent<Character>().name);
         }
         if (rightCharacter)
