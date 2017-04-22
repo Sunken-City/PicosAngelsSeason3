@@ -46,9 +46,16 @@ public class Dialogue : MonoBehaviour
     {
         ++m_currentProgressThroughString;
         SetScrollingText();
-        if (m_currentProgressThroughString % 8 == 0 && leftCharacter && m_currentProgressThroughString / 2 <= m_currentDialogueText.Length)
+        if (m_currentProgressThroughString % 8 == 0 && m_currentProgressThroughString / 2 <= m_currentDialogueText.Length)
         {
-            leftCharacter.GetComponent<Character>().PlayVoice();
+            if (leftCharacter && leftCharacter.GetComponent<Character>().name == dialogueBox.nameText.text)
+            {
+                leftCharacter.GetComponent<Character>().PlayVoice();
+            }
+            else if (rightCharacter && rightCharacter.GetComponent<Character>().name == dialogueBox.nameText.text)
+            {
+                rightCharacter.GetComponent<Character>().PlayVoice();
+            }
         }
     }
 

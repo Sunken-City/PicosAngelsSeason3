@@ -17,6 +17,6 @@ public class Chat : ScriptableObject
         public Character.Animations rightExpression;
     };
 
-    public Sprite background;
+    //public Sprite background;
     public List<Command> chatCommands = new List<Command>();
 }
