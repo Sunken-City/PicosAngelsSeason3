@@ -65,8 +65,8 @@ public class Dialogue : MonoBehaviour
                 Destroy(leftCharacter);
             }
             leftCharacter = Instantiate(cmd.leftCharacter);
-            SetCharacterName(leftCharacter.GetComponent<Character>().name);
             leftCharacter.GetComponent<SpriteRenderer>().sprite = leftCharacter.GetComponent<Character>().emotions[(int)cmd.expression];
+            SetCharacterName(leftCharacter.GetComponent<Character>().name);
         }
     }
 }

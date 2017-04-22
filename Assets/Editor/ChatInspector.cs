@@ -20,6 +20,7 @@ public class ChatEditor : Editor
             GUILayout.Label("Command " + (i + 1));
 
             chat.chatCommands[i].leftCharacter = (GameObject)EditorGUILayout.ObjectField("Left Character:", chat.chatCommands[i].leftCharacter, typeof(GameObject), false);
+            chat.chatCommands[i].expression = (Character.Animations)EditorGUILayout.EnumPopup("Expression:", chat.chatCommands[i].expression);
             if (chat.chatCommands[i].leftCharacter)
             {
                 Texture2D myTexture = AssetPreview.GetAssetPreview(chat.chatCommands[i].leftCharacter.GetComponent<SpriteRenderer>().sprite);
@@ -30,6 +31,9 @@ public class ChatEditor : Editor
 
             Seperator();
         }
+
+        if (GUILayout.Button("Remove Last Chat Command"))
+            chat.chatCommands.RemoveAt(chat.chatCommands.Count - 1);
 
         EditorUtility.SetDirty(chat);
     }
