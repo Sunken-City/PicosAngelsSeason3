@@ -6,8 +6,9 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public static GameController instance;
-    public Chat chats;
+    public Chat[] chats;
     int m_currentCommand = 0;
+    int m_currentChat = 0;
 
     void Awake()
     {
@@ -19,7 +20,6 @@ public class GameController : MonoBehaviour
         }
 
         instance = this;
-        Dialogue.instance.SetText("Ahahahaaha");
     }
     
     // Use this for initialization
@@ -33,10 +33,11 @@ public class GameController : MonoBehaviour
     {
         if (Input.GetButtonDown("Advance"))
         {
-            Dialogue.instance.ApplyCommand(chats.chatCommands[m_currentCommand++]);
-            if(m_currentCommand >= chats.chatCommands.Length)
+            Dialogue.instance.ApplyCommand(chats[m_currentChat].chatCommands[m_currentCommand++]);
+            if(m_currentCommand >= chats[m_currentChat].chatCommands.Count)
             {
                 m_currentCommand = 0;
+                ++m_currentChat;
             }
         }
     }
