@@ -11,6 +11,7 @@ public class Chat : ScriptableObject
         [Multiline]
         public string dialogueText;
         public GameObject leftCharacter;
+        public Character.Animations expression;
     };
 
     public List<Command> chatCommands = new List<Command>();
