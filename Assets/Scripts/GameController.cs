@@ -22,10 +22,22 @@ public class GameController : MonoBehaviour
         instance = this;
     }
 
+    void StartBackgroundMusic(AudioClip soundClip)
+    {
+        if (soundClip == null || soundClip == GetComponent<AudioSource>().clip)
+        {
+            return;
+        }
+        GetComponent<AudioSource>().Stop();
+        GetComponent<AudioSource>().clip = soundClip;
+        GetComponent<AudioSource>().Play();
+    }
+
     // Use this for initialization
     void Start()
     {
         Dialogue.instance.dialogueBox.background.GetComponent<SpriteRenderer>().sprite = chats[0].background;
+        StartBackgroundMusic(chats[0].music);
     }
 
     // Update is called once per frame
@@ -41,6 +53,7 @@ public class GameController : MonoBehaviour
             {
                 m_currentCommand = 0;
                 ++m_currentChat;
+                StartBackgroundMusic(chats[m_currentChat].music);
                 Dialogue.instance.dialogueBox.background.GetComponent<SpriteRenderer>().sprite = chats[m_currentChat].background;
                 Dialogue.instance.ApplyCommand(chats[m_currentChat].chatCommands[m_currentCommand]);
             }
@@ -55,11 +68,11 @@ public class GameController : MonoBehaviour
             {
                 --m_currentChat;
                 m_currentCommand = chats[m_currentChat].chatCommands.Count;
+                StartBackgroundMusic(chats[m_currentChat].music);
                 Dialogue.instance.dialogueBox.background.GetComponent<SpriteRenderer>().sprite = chats[m_currentChat].background;
                 Dialogue.instance.ApplyCommand(chats[m_currentChat].chatCommands[m_currentCommand]);
             }
-            }
-
         }
     }
+}
 

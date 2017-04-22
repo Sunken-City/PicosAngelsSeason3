@@ -11,11 +11,8 @@ public class ChatEditor : Editor
         Chat chat = (Chat)target;
 
         chat.background = (Sprite)EditorGUILayout.ObjectField("Background:", chat.background, typeof(Sprite), false);
-        if (chat.background)
-        {
-            Texture2D myTexture = AssetPreview.GetAssetPreview(chat.background);
-            GUILayout.Label(myTexture);
-        }
+        chat.music = (AudioClip)EditorGUILayout.ObjectField("Music:", chat.music, typeof(AudioClip), false);
+
         GUILayout.Label("Command Count: " + chat.chatCommands.Count);
 
         if (GUILayout.Button("Add New Chat Command"))

@@ -18,5 +18,6 @@ public class Chat : ScriptableObject
     };
 
     public Sprite background;
+    public AudioClip music;
     public List<Command> chatCommands = new List<Command>();
 }
