@@ -3,9 +3,19 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class GameController : MonoBehaviour
+public class Dialogue : MonoBehaviour
 {
-    public static GameController instance;
+    public static Dialogue instance;
+
+    //Static HUD GUI elements
+    [System.Serializable]
+    public class DialogueReferences
+    {
+        public Canvas dialogueBox;
+        public Text dialogueText;
+        public Text nameText;
+    };
+    public DialogueReferences dialogueBox;
 
     void Awake()
     {
@@ -17,18 +27,22 @@ public class GameController : MonoBehaviour
         }
 
         instance = this;
-        Dialogue.instance.SetText("Ahahahaaha");
     }
-    
+
     // Use this for initialization
     void Start ()
     {
-
+        
     }
     
     // Update is called once per frame
     void Update ()
     {
         
+    }
+
+    public void SetText(string name)
+    {
+        dialogueBox.dialogueText.text = name;
     }
 }
