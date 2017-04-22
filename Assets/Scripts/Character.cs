@@ -21,6 +21,8 @@ public class Character : MonoBehaviour {
     public string name;
     public Sprite[] emotions;
     public Soundbank voiceSounds;
+    private Vector2 voiceDisplacementVector;
+    private Vector2 initialPosition;
 
     // Use this for initialization
     void Start ()
@@ -28,6 +30,8 @@ public class Character : MonoBehaviour {
         Vector4 color = GetComponent<SpriteRenderer>().color;
         color.w = 0.0f;
         GetComponent<SpriteRenderer>().color = color;
+        voiceDisplacementVector = new Vector2(0.0f, 0.0f);
+        initialPosition = transform.localPosition;
     }
     
     // Update is called once per frame
@@ -35,11 +39,10 @@ public class Character : MonoBehaviour {
     {
         Vector4 color = GetComponent<SpriteRenderer>().color;
         color.w = Mathf.Lerp(GetComponent<SpriteRenderer>().color.a, 1.0f, 0.05f);
-        GetComponent<SpriteRenderer>().color = color;    
-    }
+        GetComponent<SpriteRenderer>().color = color;
 
-    public void MarkForEntry()
-    {
+        voiceDisplacementVector *= 0.9f;
+        transform.localPosition = initialPosition + voiceDisplacementVector;
     }
 
     public void PlayVoice()
@@ -51,6 +54,7 @@ public class Character : MonoBehaviour {
             {
                 Dialogue.instance.GetComponent<AudioSource>().clip = voiceSounds.TrackList[index].sample;
                 Dialogue.instance.GetComponent<AudioSource>().Play();
+                voiceDisplacementVector += new Vector2(Random.Range(-0.05f, 0.05f), Random.Range(0.2f, 0.4f));
             }
         }
     }
