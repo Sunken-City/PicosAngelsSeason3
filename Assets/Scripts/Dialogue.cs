@@ -18,6 +18,9 @@ public class Dialogue : MonoBehaviour
     public DialogueReferences dialogueBox;
     public GameObject leftCharacter;
     public GameObject rightCharacter;
+    
+    private string m_currentDialogueText = "";
+    private int m_currentProgressThroughString = 0;
 
     void Awake()
     {
@@ -40,12 +43,20 @@ public class Dialogue : MonoBehaviour
     // Update is called once per frame
     void Update ()
     {
-        
+        ++m_currentProgressThroughString;
+        SetScrollingText();
     }
 
     public void SetText(string dialogText)
     {
-        dialogueBox.dialogueText.text = dialogText;
+        m_currentDialogueText = dialogText;
+        m_currentProgressThroughString = 0;
+    }
+
+    private void SetScrollingText()
+    {
+        int substring = Mathf.Min(m_currentDialogueText.Length + 1, m_currentProgressThroughString / 2);
+        dialogueBox.dialogueText.text = m_currentDialogueText.Substring(0, substring);
     }
 
     public void SetCharacterName(string characterName)

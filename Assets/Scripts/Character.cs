@@ -21,12 +21,22 @@ public class Character : MonoBehaviour {
     public Sprite[] emotions;
 
     // Use this for initialization
-    void Start () {
-        
+    void Start ()
+    {
     }
     
     // Update is called once per frame
-    void Update () {
-        
+    void Update ()
+    {
+        Vector4 color = GetComponent<SpriteRenderer>().color;
+        color.w = Mathf.Lerp(GetComponent<SpriteRenderer>().color.a, 1.0f, 0.05f);
+        GetComponent<SpriteRenderer>().color = color;    
+    }
+
+    public void MarkForEntry()
+    {
+        Vector4 color = GetComponent<SpriteRenderer>().color;
+        color.w = 0.0f;
+        GetComponent<SpriteRenderer>().color = color;
     }
 }
