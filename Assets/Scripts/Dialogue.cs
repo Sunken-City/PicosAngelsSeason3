@@ -66,7 +66,7 @@ public class Dialogue : MonoBehaviour
                 Destroy(leftCharacter);
             }
             leftCharacter = Instantiate(cmd.leftCharacter);
-            leftCharacter.transform.SetPositionAndRotation(new Vector2(-6.0f, -5.0f), Quaternion.Euler(leftCharacter.transform.rotation.eulerAngles));
+            leftCharacter.transform.SetPositionAndRotation(new Vector3(-6.0f, -5.0f, 0.0f) + leftCharacter.transform.localPosition, Quaternion.Euler(leftCharacter.transform.rotation.eulerAngles));
             leftCharacter.GetComponent<SpriteRenderer>().sprite = leftCharacter.GetComponent<Character>().emotions[(int)cmd.leftExpression];
             SetCharacterName(leftCharacter.GetComponent<Character>().name);
         }
@@ -77,7 +77,7 @@ public class Dialogue : MonoBehaviour
                 Destroy(rightCharacter);
             }
             rightCharacter = Instantiate(cmd.rightCharacter);
-            rightCharacter.transform.SetPositionAndRotation(new Vector2(6.0f, -5.0f), Quaternion.Euler(rightCharacter.transform.rotation.eulerAngles + new Vector3(0.0f, 180.0f, 0.0f)));
+            rightCharacter.transform.SetPositionAndRotation(new Vector3(6.0f, -5.0f, 0.0f) + rightCharacter.transform.localPosition, Quaternion.Euler(rightCharacter.transform.rotation.eulerAngles + new Vector3(0.0f, 180.0f, 0.0f)));
             rightCharacter.GetComponent<SpriteRenderer>().sprite = rightCharacter.GetComponent<Character>().emotions[(int)cmd.rightExpression];
             SetCharacterName(rightCharacter.GetComponent<Character>().name);
         }
