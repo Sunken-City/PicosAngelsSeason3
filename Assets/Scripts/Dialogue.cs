@@ -41,8 +41,25 @@ public class Dialogue : MonoBehaviour
         
     }
 
-    public void SetText(string name)
+    public void SetText(string dialogText)
     {
-        dialogueBox.dialogueText.text = name;
+        dialogueBox.dialogueText.text = dialogText;
+    }
+
+    public void SetCharacterName(string characterName)
+    {
+        dialogueBox.dialogueText.name = characterName;
+    }
+
+    public void ApplyCommand(Chat.Command cmd)
+    {
+        if (!string.IsNullOrEmpty(cmd.dialogueText))
+        {
+            SetText(cmd.dialogueText);
+        }
+        if (!string.IsNullOrEmpty(cmd.characterName))
+        {
+            SetCharacterName(cmd.characterName);
+        }
     }
 }
