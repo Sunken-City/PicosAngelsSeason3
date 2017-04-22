@@ -46,7 +46,7 @@ public class Dialogue : MonoBehaviour
     {
         ++m_currentProgressThroughString;
         SetScrollingText();
-        if (m_currentProgressThroughString % 2 == 0 && leftCharacter)
+        if (m_currentProgressThroughString % 8 == 0 && leftCharacter && m_currentProgressThroughString / 2 <= m_currentDialogueText.Length)
         {
             leftCharacter.GetComponent<Character>().PlayVoice();
         }
