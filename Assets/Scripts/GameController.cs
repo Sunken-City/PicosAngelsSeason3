@@ -37,11 +37,11 @@ public class GameController : MonoBehaviour
             {
                 Dialogue.instance.ApplyCommand(chats[m_currentChat].chatCommands[m_currentCommand++]);
             }
-           
-                if ((m_currentCommand > chats[m_currentChat].chatCommands.Count) && (m_currentChat < chats.Length))
+            if ((m_currentCommand > chats[m_currentChat].chatCommands.Count) && (m_currentChat < chats.Length))
             {
                 m_currentCommand = 0;
                 ++m_currentChat;
+                Dialogue.instance.dialogueBox.background.GetComponent<SpriteRenderer>().sprite = chats[m_currentChat].background;
                 Dialogue.instance.ApplyCommand(chats[m_currentChat].chatCommands[m_currentCommand]);
             }
         }
@@ -52,11 +52,12 @@ public class GameController : MonoBehaviour
                 Dialogue.instance.ApplyCommand(chats[m_currentChat].chatCommands[--m_currentCommand]);
             }
             else if ((m_currentCommand == 0) && (m_currentChat > 0))
-                {
-                    --m_currentChat;
-                    m_currentCommand = chats[m_currentChat].chatCommands.Count;
+            {
+                --m_currentChat;
+                m_currentCommand = chats[m_currentChat].chatCommands.Count;
+                Dialogue.instance.dialogueBox.background.GetComponent<SpriteRenderer>().sprite = chats[m_currentChat].background;
                 Dialogue.instance.ApplyCommand(chats[m_currentChat].chatCommands[m_currentCommand]);
-                }
+            }
             }
 
         }
