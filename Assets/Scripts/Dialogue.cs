@@ -45,6 +45,10 @@ public class Dialogue : MonoBehaviour
     {
         ++m_currentProgressThroughString;
         SetScrollingText();
+        if (m_currentProgressThroughString % 2 == 0 && leftCharacter)
+        {
+            leftCharacter.GetComponent<Character>().PlayVoice();
+        }
     }
 
     public void SetText(string dialogText)
@@ -55,7 +59,7 @@ public class Dialogue : MonoBehaviour
 
     private void SetScrollingText()
     {
-        int substring = Mathf.Min(m_currentDialogueText.Length + 1, m_currentProgressThroughString / 2);
+        int substring = Mathf.Min(m_currentDialogueText.Length, m_currentProgressThroughString / 2);
         dialogueBox.dialogueText.text = m_currentDialogueText.Substring(0, substring);
     }
 
