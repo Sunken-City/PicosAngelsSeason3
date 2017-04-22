@@ -21,24 +21,45 @@ public class GameController : MonoBehaviour
 
         instance = this;
     }
-    
+
     // Use this for initialization
-    void Start ()
+    void Start()
     {
 
     }
-    
+
     // Update is called once per frame
-    void Update ()
+    void Update()
     {
         if (Input.GetButtonDown("Advance"))
         {
-            Dialogue.instance.ApplyCommand(chats[m_currentChat].chatCommands[m_currentCommand++]);
-            if(m_currentCommand >= chats[m_currentChat].chatCommands.Count)
+            if (m_currentCommand <= chats[m_currentChat].chatCommands.Count)
+            {
+                Dialogue.instance.ApplyCommand(chats[m_currentChat].chatCommands[m_currentCommand++]);
+            }
+           
+                if ((m_currentCommand > chats[m_currentChat].chatCommands.Count) && (m_currentChat < chats.Length))
             {
                 m_currentCommand = 0;
                 ++m_currentChat;
+                Dialogue.instance.ApplyCommand(chats[m_currentChat].chatCommands[m_currentCommand]);
             }
         }
+        if (Input.GetButtonDown("Return"))
+        {
+            if (m_currentCommand > 0)
+            {
+                Dialogue.instance.ApplyCommand(chats[m_currentChat].chatCommands[--m_currentCommand]);
+            }
+            else if ((m_currentCommand == 0) && (m_currentChat > 0))
+                {
+                    --m_currentChat;
+                    m_currentCommand = chats[m_currentChat].chatCommands.Count;
+                Dialogue.instance.ApplyCommand(chats[m_currentChat].chatCommands[m_currentCommand]);
+                }
+
+            }
+
+        }
     }
-}
+
