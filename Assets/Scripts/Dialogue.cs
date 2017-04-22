@@ -75,9 +75,7 @@ public class Dialogue : MonoBehaviour
             {
                 Destroy(rightCharacter);
             }
-            Transform newTransform = transform;
-            newTransform.SetPositionAndRotation(new Vector2(2.0f, 0.0f), Quaternion.Euler(new Vector3(0.0f, 180.0f, 0.0f)));
-            rightCharacter = Instantiate(cmd.rightCharacter, newTransform);
+            rightCharacter = Instantiate(cmd.rightCharacter);
             rightCharacter.GetComponent<SpriteRenderer>().sprite = rightCharacter.GetComponent<Character>().emotions[(int)cmd.rightExpression];
             SetCharacterName(rightCharacter.GetComponent<Character>().name);
         }
