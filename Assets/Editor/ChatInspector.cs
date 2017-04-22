@@ -21,7 +21,7 @@ public class ChatEditor : Editor
 
             chat.chatCommands[i].leftCharacter = (GameObject)EditorGUILayout.ObjectField("Left Character:", chat.chatCommands[i].leftCharacter, typeof(GameObject), false);
             chat.chatCommands[i].leftExpression = (Character.Animations)EditorGUILayout.EnumPopup("Expression:", chat.chatCommands[i].leftExpression);
-            chat.chatCommands[i].rightCharacter = (GameObject)EditorGUILayout.ObjectField("Left Character:", chat.chatCommands[i].rightCharacter, typeof(GameObject), false);
+            chat.chatCommands[i].rightCharacter = (GameObject)EditorGUILayout.ObjectField("Right Character:", chat.chatCommands[i].rightCharacter, typeof(GameObject), false);
             chat.chatCommands[i].rightExpression = (Character.Animations)EditorGUILayout.EnumPopup("Expression:", chat.chatCommands[i].rightExpression);
             if (chat.chatCommands[i].leftCharacter)
             {
