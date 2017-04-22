@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Character : MonoBehaviour {
 
@@ -19,10 +20,14 @@ public class Character : MonoBehaviour {
     };
     public string name;
     public Sprite[] emotions;
+    public Soundbank voiceSounds;
 
     // Use this for initialization
     void Start ()
     {
+        Vector4 color = GetComponent<SpriteRenderer>().color;
+        color.w = 0.0f;
+        GetComponent<SpriteRenderer>().color = color;
     }
     
     // Update is called once per frame
@@ -35,8 +40,18 @@ public class Character : MonoBehaviour {
 
     public void MarkForEntry()
     {
-        Vector4 color = GetComponent<SpriteRenderer>().color;
-        color.w = 0.0f;
-        GetComponent<SpriteRenderer>().color = color;
+    }
+
+    public void PlayVoice()
+    {
+        if (voiceSounds.TrackList.Length > 0)
+        {
+            int index = Random.Range(0, voiceSounds.TrackList.Length);
+            if (voiceSounds.TrackList[index] != null)
+            {
+                Dialogue.instance.GetComponent<AudioSource>().clip = voiceSounds.TrackList[index].sample;
+                Dialogue.instance.GetComponent<AudioSource>().Play();
+            }
+        }
     }
 }
