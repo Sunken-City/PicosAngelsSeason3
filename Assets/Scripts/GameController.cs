@@ -45,8 +45,11 @@ public class GameController : MonoBehaviour
     {
         if (Input.GetButtonDown("Advance"))
         {
-            Dialogue.instance.ApplyCommand(chats[m_currentChat].chatCommands[m_currentCommand++]);
-            if(m_currentCommand >= chats[m_currentChat].chatCommands.Count)
+            if (m_currentCommand <= chats[m_currentChat].chatCommands.Count)
+            {
+                Dialogue.instance.ApplyCommand(chats[m_currentChat].chatCommands[m_currentCommand++]);
+            }
+            else if(m_currentCommand > chats[m_currentChat].chatCommands.Count)
             {
                 m_currentCommand = 0;
                 ++m_currentChat;
