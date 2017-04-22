@@ -83,7 +83,7 @@ public class Dialogue : MonoBehaviour
         }
         if (!string.IsNullOrEmpty(cmd.speakerName))
         {
-            SetCharacterName(cmd.dialogueText);
+            SetCharacterName(cmd.speakerName);
         }
     }
 }
