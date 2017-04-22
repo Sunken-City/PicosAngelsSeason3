@@ -11,6 +11,7 @@ public class Dialogue : MonoBehaviour
     [System.Serializable]
     public class DialogueReferences
     {
+        public GameObject background;
         public Canvas dialogueBox;
         public Text dialogueText;
         public Text nameText;

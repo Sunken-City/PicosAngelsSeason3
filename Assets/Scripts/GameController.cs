@@ -25,7 +25,7 @@ public class GameController : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-
+        Dialogue.instance.dialogueBox.background.GetComponent<SpriteRenderer>().sprite = chats[0].background;
     }
     
     // Update is called once per frame
@@ -38,6 +38,7 @@ public class GameController : MonoBehaviour
             {
                 m_currentCommand = 0;
                 ++m_currentChat;
+                Dialogue.instance.dialogueBox.background.GetComponent<SpriteRenderer>().sprite = chats[m_currentChat].background;
             }
         }
     }
