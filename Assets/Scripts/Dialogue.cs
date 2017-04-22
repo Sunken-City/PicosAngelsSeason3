@@ -67,8 +67,11 @@ public class Dialogue : MonoBehaviour
             }
             leftCharacter = Instantiate(cmd.leftCharacter);
             leftCharacter.transform.SetPositionAndRotation(new Vector3(-6.0f, -5.0f, 0.0f) + leftCharacter.transform.localPosition, Quaternion.Euler(leftCharacter.transform.rotation.eulerAngles));
-            leftCharacter.GetComponent<SpriteRenderer>().sprite = leftCharacter.GetComponent<Character>().emotions[(int)cmd.leftExpression];
             SetCharacterName(leftCharacter.GetComponent<Character>().name);
+        }
+        if(leftCharacter)
+        {
+            leftCharacter.GetComponent<SpriteRenderer>().sprite = leftCharacter.GetComponent<Character>().emotions[(int)cmd.leftExpression];
         }
         if (cmd.rightCharacter)
         {
@@ -78,8 +81,11 @@ public class Dialogue : MonoBehaviour
             }
             rightCharacter = Instantiate(cmd.rightCharacter);
             rightCharacter.transform.SetPositionAndRotation(new Vector3(6.0f, -5.0f, 0.0f) + rightCharacter.transform.localPosition, Quaternion.Euler(rightCharacter.transform.rotation.eulerAngles + new Vector3(0.0f, 180.0f, 0.0f)));
-            rightCharacter.GetComponent<SpriteRenderer>().sprite = rightCharacter.GetComponent<Character>().emotions[(int)cmd.rightExpression];
             SetCharacterName(rightCharacter.GetComponent<Character>().name);
+        }
+        if (rightCharacter)
+        {
+            rightCharacter.GetComponent<SpriteRenderer>().sprite = rightCharacter.GetComponent<Character>().emotions[(int)cmd.rightExpression];
         }
         if (!string.IsNullOrEmpty(cmd.speakerName))
         {
