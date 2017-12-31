@@ -18,6 +18,7 @@ public class AudioSample
 
 public class Soundbank : ScriptableObject
 {
+    public float volume = 1.0f;
     public AudioSample[] TrackList;
 }
 
