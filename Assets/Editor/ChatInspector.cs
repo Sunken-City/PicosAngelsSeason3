@@ -15,11 +15,11 @@ public class ChatEditor : Editor
 
         GUILayout.Label("Command Count: " + chat.chatCommands.Count);
 
-        if (GUILayout.Button("Add New Chat Command"))
-            chat.chatCommands.Add(new Chat.Command());
-
         for (int i = 0; i < chat.chatCommands.Count; i++)
         {
+//             if (GUILayout.Button("Remove This Chat Command"))
+//                 chat.chatCommands.RemoveAt(i);
+
             GUILayout.Label("Command " + (i + 1));
 
             chat.chatCommands[i].leftCharacter = (GameObject)EditorGUILayout.ObjectField("Left Character:", chat.chatCommands[i].leftCharacter, typeof(GameObject), false);
@@ -41,7 +41,15 @@ public class ChatEditor : Editor
             chat.chatCommands[i].dialogueText = EditorGUILayout.TextArea(chat.chatCommands[i].dialogueText, GUILayout.MaxHeight(50));
 
             Seperator();
+
+            if (GUILayout.Button("Insert New Chat Command Here"))
+                chat.chatCommands.Insert(i + 1, new Chat.Command());
+
+            Seperator();
         }
+
+        if (GUILayout.Button("Add New Chat Command"))
+            chat.chatCommands.Add(new Chat.Command());
 
         if (GUILayout.Button("Remove Last Chat Command"))
             chat.chatCommands.RemoveAt(chat.chatCommands.Count - 1);

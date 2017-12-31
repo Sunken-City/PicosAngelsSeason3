@@ -54,6 +54,7 @@ public class Character : MonoBehaviour {
             {
                 Dialogue.instance.GetComponent<AudioSource>().clip = voiceSounds.TrackList[index].sample;
                 Dialogue.instance.GetComponent<AudioSource>().Play();
+                Dialogue.instance.GetComponent<AudioSource>().volume = voiceSounds.volume;
                 voiceDisplacementVector += new Vector2(Random.Range(-0.05f, 0.05f), Random.Range(0.2f, 0.4f));
             }
         }
