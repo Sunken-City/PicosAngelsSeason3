@@ -1,0 +1,420 @@
+fileFormatVersion: 2
+guid: 59d96bbef49ac0341a97db62e4c1c5cf
+timeCreated: 1517627824
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Negative Wrys_0
+    21300002: Negative Wrys_1
+    21300004: Negative Wrys_2
+    21300006: Negative Wrys_3
+    21300008: Negative Wrys_4
+    21300010: Negative Wrys_5
+    21300012: Negative Wrys_6
+    21300014: Negative Wrys_7
+    21300016: Negative Wrys_8
+    21300018: Negative Wrys_9
+    21300020: Negative Wrys_10
+    21300022: Negative Wrys_11
+    21300024: Negative Wrys_12
+    21300026: Negative Wrys_13
+    21300028: Negative Wrys_14
+    21300030: Negative Wrys_15
+    21300032: Negative Wrys_16
+    21300034: Negative Wrys_17
+    21300036: Negative Wrys_18
+    21300038: Negative Wrys_19
+    21300040: Negative Wrys_20
+    21300042: Negative Wrys_21
+    21300044: Negative Wrys_22
+    21300046: Negative Wrys_23
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Negative Wrys_0
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 2209
+        width: 1060
+        height: 1998
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Negative Wrys_1
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 3925
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Negative Wrys_2
+      rect:
+        serializedVersion: 2
+        x: 1993
+        y: 3529
+        width: 845
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Negative Wrys_3
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 3694
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Negative Wrys_4
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 3617
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Negative Wrys_5
+      rect:
+        serializedVersion: 2
+        x: 2093
+        y: 3531
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Negative Wrys_6
+      rect:
+        serializedVersion: 2
+        x: 2118
+        y: 3537
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Negative Wrys_7
+      rect:
+        serializedVersion: 2
+        x: 1880
+        y: 3529
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Negative Wrys_8
+      rect:
+        serializedVersion: 2
+        x: 2019
+        y: 3529
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Negative Wrys_9
+      rect:
+        serializedVersion: 2
+        x: 2126
+        y: 3531
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Negative Wrys_10
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 3286
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Negative Wrys_11
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 3149
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Negative Wrys_12
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 3069
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Negative Wrys_13
+      rect:
+        serializedVersion: 2
+        x: 1202
+        y: 3037
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Negative Wrys_14
+      rect:
+        serializedVersion: 2
+        x: 2893
+        y: 2350
+        width: 130
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Negative Wrys_15
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 1978
+        width: 26
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Negative Wrys_16
+      rect:
+        serializedVersion: 2
+        x: 3108
+        y: 2038
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Negative Wrys_17
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 1996
+        width: 80
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Negative Wrys_18
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 1959
+        width: 5
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Negative Wrys_19
+      rect:
+        serializedVersion: 2
+        x: 3186
+        y: 1954
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Negative Wrys_20
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 1255
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Negative Wrys_21
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 1191
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Negative Wrys_22
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 403
+        width: 103
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Negative Wrys_23
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 385
+        width: 69
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
