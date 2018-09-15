@@ -5,7 +5,7 @@ Direct3D:
     Renderer: NVIDIA GeForce GTX 1060 6GB (ID=0x1c03)
     Vendor:   NVIDIA
     VRAM:     3072 MB
-    Driver:   24.21.13.9764
+    Driver:   24.21.13.9907
 Begin MonoManager ReloadAssembly
 Platform assembly: D:\jonathan\OneDrive\Documents\Projects\WhiteCastle\WhiteCastle_Data\Managed\UnityEngine.dll (this message is harmless)
 Loading D:\jonathan\OneDrive\Documents\Projects\WhiteCastle\WhiteCastle_Data\Managed\UnityEngine.dll into Unity Child Domain
@@ -15,18 +15,18 @@ Platform assembly: D:\jonathan\OneDrive\Documents\Projects\WhiteCastle\WhiteCast
 Loading D:\jonathan\OneDrive\Documents\Projects\WhiteCastle\WhiteCastle_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: D:\jonathan\OneDrive\Documents\Projects\WhiteCastle\WhiteCastle_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading D:\jonathan\OneDrive\Documents\Projects\WhiteCastle\WhiteCastle_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.086 seconds
+- Completed reload, in  0.062 seconds
 Platform assembly: D:\jonathan\OneDrive\Documents\Projects\WhiteCastle\WhiteCastle_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\jonathan\OneDrive\Documents\Projects\WhiteCastle\WhiteCastle_Data\Managed\System.dll (this message is harmless)
 desktop: 3440x1440 75Hz; virtual: 3440x1440 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.827843 ms
+UnloadTime: 0.850008 ms
 Setting up 6 worker threads for Enlighten.
-  Thread -> id: 14cc -> priority: 1 
-  Thread -> id: 11fc -> priority: 1 
-  Thread -> id: 948 -> priority: 1 
-  Thread -> id: 2f28 -> priority: 1 
-  Thread -> id: 878 -> priority: 1 
-  Thread -> id: 30fc -> priority: 1 
+  Thread -> id: 3fec -> priority: 1 
+  Thread -> id: 447c -> priority: 1 
+  Thread -> id: 30e8 -> priority: 1 
+  Thread -> id: 11a8 -> priority: 1 
+  Thread -> id: 4a5c -> priority: 1 
+  Thread -> id: 3d00 -> priority: 1 
