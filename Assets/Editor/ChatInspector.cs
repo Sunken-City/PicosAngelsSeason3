@@ -17,9 +17,10 @@ public class ChatEditor : Editor
 
         for (int i = 0; i < chat.chatCommands.Count; i++)
         {
-//             if (GUILayout.Button("Remove This Chat Command"))
-//                 chat.chatCommands.RemoveAt(i);
-
+            if (GUILayout.Button("X", GUILayout.Width(25), GUILayout.Height(25)))
+            {
+                chat.chatCommands.RemoveAt(i);
+            }
             GUILayout.Label("Command " + (i + 1));
 
             chat.chatCommands[i].leftCharacter = (GameObject)EditorGUILayout.ObjectField("Left Character:", chat.chatCommands[i].leftCharacter, typeof(GameObject), false);
