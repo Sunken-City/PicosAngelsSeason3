@@ -43,6 +43,8 @@ public class ChatEditor : Editor
             GUILayout.Label("Dialogue Text:");
             chat.chatCommands[i].dialogueText = EditorGUILayout.TextArea(chat.chatCommands[i].dialogueText, GUILayout.MaxHeight(50));
 
+            chat.chatCommands[i].sfx = (AudioClip)EditorGUILayout.ObjectField("Sound Effect:", chat.chatCommands[i].sfx, typeof(AudioClip), false);
+
             Seperator();
 
             if (GUILayout.Button("Insert New", GUILayout.Width(100)))

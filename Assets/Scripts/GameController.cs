@@ -32,6 +32,14 @@ public class GameController : MonoBehaviour
         GetComponent<AudioSource>().Play();
     }
 
+    void PlaySoundEffect(AudioClip soundEffect)
+    {
+        if (soundEffect == null)
+        {
+            return;
+        }
+        GetComponent<AudioSource>().PlayOneShot(soundEffect);
+    }
     
     // Use this for initialization
     void Start ()
@@ -47,13 +55,15 @@ public class GameController : MonoBehaviour
         {
             if (m_currentCommand <= chats[m_currentChat].chatCommands.Count)
             {
+                PlaySoundEffect(chats[m_currentChat].chatCommands[m_currentCommand].sfx);
                 Dialogue.instance.ApplyCommand(chats[m_currentChat].chatCommands[m_currentCommand++]);
             }
-            else if(m_currentCommand > chats[m_currentChat].chatCommands.Count)
+            else if (m_currentCommand > chats[m_currentChat].chatCommands.Count)
             {
                 m_currentCommand = 0;
                 ++m_currentChat;
                 StartBackgroundMusic(chats[m_currentChat].music);
+                PlaySoundEffect(chats[m_currentChat].chatCommands[m_currentCommand].sfx);
                 Dialogue.instance.dialogueBox.background.GetComponent<SpriteRenderer>().sprite = chats[m_currentChat].background;
                 Dialogue.instance.ApplyCommand(chats[m_currentChat].chatCommands[m_currentCommand]);
             }
