@@ -11,6 +11,7 @@ public class Chat : ScriptableObject
         [Multiline]
         public string dialogueText;
         public string speakerName;
+        public AudioClip sfx;
         public GameObject leftCharacter;
         public Character.Animations leftExpression;
         public GameObject rightCharacter;
